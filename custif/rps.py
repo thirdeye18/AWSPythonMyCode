@@ -9,6 +9,8 @@ import random
 cpu = random.randrange(1,4)
 
 # rock = 1, paper = 2, scissors = 3
+gameTuple = ("rock", "paper", "scissors")
+
 prompt = 'Please choose (R)ock, (P)aper, or (S)cissors. '
 rock = "rock beats scissors"
 paper = "paper beats rock"
