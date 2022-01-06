@@ -7,7 +7,10 @@ with open(fileName, "r") as configfile:
     ## readlines() creates a list by reading target
     ## file line by line
     # configlist = configfile.read().splitlines()
+
     configlist = [line.strip() for line in configfile]
+    # line below does not work
+    # print(f"{(line.strip() for line in configfile).len()} lines in file")
 
 ## file was just auto closed (no more indenting)
 
@@ -16,5 +19,7 @@ print(configlist)
 
 # Printing the number of lines fro the original file
 print("vlanconfig.cfg contains ", len(configlist), "lines")
+
+
 
 
