@@ -33,10 +33,9 @@ def hyphen_sorted():
 """ takes a number as a parameter and check the number is prime or not
 """
 def prime_checker(num):
-    if num < 2:
-        print("Input must be a non-natural number >1 to check for prime")
+    if num < 2 or type(num) != int:
+        print("Input must be a natural number >1 to check for prime")
         return False
-    num = int(num)
     # loop from 2 to num checking if it is divisible by other numbers
     for i in range(2, num):
         if num % i == 0:
