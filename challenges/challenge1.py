@@ -11,13 +11,11 @@ def find_uniques(items):
 
 """ check whether a string is a pangram or not, does not work if punctuation
     or digits are present
-    teh string has to contain just letters and spaces
+    the string has to contain just letters and spaces
 """
 def panagram_check(testString):
-    # split string to individual characters, remove white space and convert to lower case
-    testList = list(testString.lower().replace(" ", ""))
     # getting a list of only unique characters
-    uniqueCharacters = find_uniques(testList)
+    uniqueCharacters = find_uniques(string_to_lower_list(testString))
     if len(uniqueCharacters) == 26:
         print("The provided string is a panagram")
         return True
@@ -37,6 +35,11 @@ def hyphen_sorted():
 def prime_checker():
     
     return null
+""" splits a string into individual characters, remove white spaces, convert to lower
+"""
+def string_to_lower_list(inputString):
+    returnList = list(inputString.lower().replace(" ", ""))
+    return returnList
 
 """ Run-time code"""
 def main():
