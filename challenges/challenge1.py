@@ -8,6 +8,10 @@ def find_uniques(items):
         if item not in uniques:
             uniques.append(item)
     return uniques
+# better way to do above
+# unique = set(nums)    # turn the list into a set, has to have unique values
+# problem is that items cannot be accesed with []
+# the whole thing can be printed, but no way to access individual items in a set
 
 """ check whether a string is a pangram or not, does not work if punctuation
     or digits are present
