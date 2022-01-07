@@ -32,9 +32,17 @@ def hyphen_sorted():
 
 """ takes a number as a parameter and check the number is prime or not
 """
-def prime_checker():
-    
-    return null
+def prime_checker(num):
+    if num < 2:
+        print("Input must be a non-natural number >1 to check for prime")
+        return False
+    num = int(num)
+    # loop from 2 to num checking if it is divisible by other numbers
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+
 """ splits a string into individual characters, remove white spaces, convert to lower
 """
 def string_to_lower_list(inputString):
