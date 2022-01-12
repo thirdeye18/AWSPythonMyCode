@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+   <body>
+	<h1>Returning Hosts</h1>
+	<p>
+	    <ul>
+            {% for host in hosts %}
+	    <li> {{ host.ip }} {{ host.fqdn }} # {{ host.hostname }} </li>
+            {% endfor %}
+	    </ul>
+     	</p> 
+   </body>
+</html>
+
